@@ -7,4 +7,4 @@ rustup toolchain install stable
 
 rustup default stable
 
-sudo apt install libusbmuxd-dev build-essential pkg-config checkinstall git autoconf automake libtool-bin libplist-dev openssl
+sudo apt install -y libusbmuxd-dev build-essential pkg-config checkinstall git autoconf automake libtool-bin libplist-dev openssl
