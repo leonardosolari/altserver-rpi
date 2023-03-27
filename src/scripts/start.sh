@@ -1,5 +1,6 @@
 #!/bin/bash
 
+/etc/init.d/dbus start
 echo "Starting avahi..."
 systemctl enable --now avahi-daemon.service
 service avahi-daemon status
