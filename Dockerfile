@@ -15,8 +15,8 @@ RUN apt install -y libusbmuxd-dev build-essential pkg-config checkinstall git au
 WORKDIR /app
 RUN wget https://github.com/NyaMisty/AltServer-Linux/releases/download/v0.0.5/AltServer-aarch64 && wget https://github.com/jkcoxson/netmuxd/releases/download/v0.1.4/aarch64-linux-netmuxd && chmod +x *
 
-#COPY src/scripts/start.sh .
-#RUN chmod +x start.sh
+COPY src/scripts/start.sh .
+RUN chmod +x start.sh
 
 #RUN NETMUXD AND ALTSERVER
 #RUN /usr/sbin/avahi-daemon -s
