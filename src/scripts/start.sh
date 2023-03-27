@@ -9,7 +9,7 @@ rm -rf /run/avahi-daemon//pid
 
 
 echo "Starting usbmuxd..."
-usbmuxd
+#usbmuxd
 
 echo "Starting netmuxd..."
 screen -S netmuxd -dm ./aarch64-linux-netmuxd --disable-unix --host 127.0.0.1
