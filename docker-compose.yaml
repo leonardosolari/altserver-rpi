@@ -12,4 +12,3 @@ services:
     privileged: true
     network_mode: host
     restart: unless-stopped
-    command: ./start.sh

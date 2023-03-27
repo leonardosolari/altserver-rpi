@@ -27,5 +27,5 @@ ENV ALTSERVER_ANISETTE_SERVER="http://192.168.1.7:6969"
 
 #RUN screen -S altserver -dm ./AltServer-aarch64
 
-#ENTRYPOINT ["start.sh"]
+ENTRYPOINT ["start.sh"]
 
