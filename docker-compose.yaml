@@ -1,0 +1,15 @@
+version: '2'
+services:
+  daemon:
+    container_name: altserver-rpi
+    image: altserver-rpi:latest
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - /var/lib/lockdown:/var/lib/lockdown
+      - /var/run:/var/run
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - .:/app
+    privileged: true
+    network_mode: host
+    restart: unless-stopped
+    command: ./start.sh
