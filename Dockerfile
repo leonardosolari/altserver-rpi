@@ -18,6 +18,8 @@ RUN wget https://github.com/NyaMisty/AltServer-Linux/releases/download/v0.0.5/Al
 COPY src/scripts/start.sh .
 RUN chmod +x start.sh
 
+RUN ls
+
 #RUN NETMUXD AND ALTSERVER
 #RUN /usr/sbin/avahi-daemon -s
 #RUN ./usr/sbin/usbmuxd
@@ -27,5 +29,5 @@ ENV ALTSERVER_ANISETTE_SERVER="http://192.168.1.7:6969"
 
 #RUN screen -S altserver -dm ./AltServer-aarch64
 
-ENTRYPOINT ["start.sh"]
+ENTRYPOINT ["/app/start.sh"]
 
