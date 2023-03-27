@@ -4,7 +4,7 @@
 echo "Starting avahi..."
 rm -rf /run/avahi-daemon//pid
 /usr/sbin/avahi-daemon -s
-service avahi-daemon status
+ps -ef | grep avahi
 
 
 echo "Starting usbmuxd..."
