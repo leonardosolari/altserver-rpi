@@ -18,8 +18,6 @@ RUN wget https://github.com/NyaMisty/AltServer-Linux/releases/download/v0.0.5/Al
 COPY src/scripts/start.sh .
 RUN chmod +x start.sh
 
-RUN ls -lh
-
 #RUN NETMUXD AND ALTSERVER
 #RUN /usr/sbin/avahi-daemon -s
 #RUN ./usr/sbin/usbmuxd
