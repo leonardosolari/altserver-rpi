@@ -1,6 +1,10 @@
 #!/bin/bash
 
 /etc/init.d/dbus start
+
+echo "Printing env variables"
+printenv
+
 echo "Starting avahi..."
 rm -rf /run/avahi-daemon//pid
 /usr/sbin/avahi-daemon -s
