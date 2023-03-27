@@ -14,7 +14,7 @@ rustup default stable
 RUN apt install -y libusbmuxd-dev build-essential pkg-config checkinstall git autoconf automake libtool-bin libplist-dev openssl
 WORKDIR /bin
 RUN wget https://github.com/NyaMisty/AltServer-Linux/releases/download/v0.0.5/AltServer-aarch64 && wget https://github.com/jkcoxson/netmuxd/releases/download/v0.1.4/aarch64-linux-netmuxd && chmod +x *
-COPY src/start.sh .
+COPY src/scripts/start.sh .
 RUN ls
 #RUN NETMUXD AND ALTSERVER
 #RUN /usr/sbin/avahi-daemon -s
