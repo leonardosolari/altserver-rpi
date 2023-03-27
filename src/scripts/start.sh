@@ -2,7 +2,8 @@
 
 /etc/init.d/dbus start
 echo "Starting avahi..."
-systemctl enable --now avahi-daemon.service
+rm -rf /run/avahi-daemon//pid
+/usr/sbin/avahi-daemon -s
 service avahi-daemon status
 
 
