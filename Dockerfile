@@ -1,4 +1,5 @@
 FROM ubuntu
+USER root
 
 RUN \
 apt update && apt upgrade && \
