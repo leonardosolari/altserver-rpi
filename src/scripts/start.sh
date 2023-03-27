@@ -8,7 +8,7 @@ ps -ef | grep avahi
 
 
 echo "Starting usbmuxd..."
-/usr/sbin/usbmuxd
+/usr/sbin/usbmuxd --user usbmux --systemd
 ps -ef | grep usbmuxd
 
 
