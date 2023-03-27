@@ -1,13 +1,12 @@
 #!/bin/bash
 
 echo "Starting avahi..."
-rm -rf /run/avahi-daemon//pid
-/usr/sbin/avahi-daemon -s
+systemctl enable --now avahi-daemon.service
 service avahi-daemon status
 
 
 echo "Starting usbmuxd..."
-#usbmuxd
+systemctl enable --now usbmuxd.service
 
 echo "Starting netmuxd..."
 screen -S netmuxd -dm ./aarch64-linux-netmuxd --disable-unix --host 127.0.0.1
