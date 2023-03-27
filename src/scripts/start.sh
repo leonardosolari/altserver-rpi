@@ -1,11 +1,9 @@
 #!/bin/bash
 
-echo "Controllo file plist"
-ls /var/lib/lockdown
-
 echo "Starting avahi..."
 rm -rf /run/avahi-daemon//pid
 /usr/sbin/avahi-daemon -s
+service avahi-daemon status
 
 
 echo "Starting usbmuxd..."
