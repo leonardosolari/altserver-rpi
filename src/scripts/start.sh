@@ -13,7 +13,7 @@ echo "Starting usbmuxd..."
 
 
 echo "Starting netmuxd..."
-./aarch64-linux-netmuxd --disable-unix --host 127.0.0.1
+screen -S netmuxd -dm ./aarch64-linux-netmuxd --disable-unix --host 127.0.0.1
 
 echo "Starting altserver..."
 ./AltServer-aarch64
