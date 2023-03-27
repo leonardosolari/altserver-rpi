@@ -8,7 +8,9 @@ ps -ef | grep avahi
 
 
 echo "Starting usbmuxd..."
-systemctl enable --now usbmuxd.service
+/usr/sbin/usbmuxd
+ps -ef | grep usbmuxd
+
 
 echo "Starting netmuxd..."
 screen -S netmuxd -dm ./aarch64-linux-netmuxd --disable-unix --host 127.0.0.1
