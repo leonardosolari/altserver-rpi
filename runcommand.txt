@@ -1,0 +1,9 @@
+docker run --name altserver-rpi -d --privileged \
+-v /dev/bus/usb:/dev/bus/usb \
+-v /var/lib/lockdown:/var/lib/lockdown \
+-v /var/run:/var/run \
+-v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+-v /var/run/dbus:/var/run/dbus \
+-v /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket \
+-p 27015:27015 \
+altserver-rpi:latest
